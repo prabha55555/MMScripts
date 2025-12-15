@@ -22,7 +22,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-literary-cream border-t-2 border-accent-gold/20">
+    <footer className="bg-white border-t-2 border-gray-200">
       <div className="container mx-auto px-4 lg:px-8 py-12">
         <motion.div
           initial="hidden"
@@ -39,14 +39,14 @@ const Footer = () => {
               </div>
               <div>
                 <h3 className="text-2xl font-serif font-bold text-primary">MMSCRIPTS</h3>
-                <p className="text-xs text-accent-gold font-medium">Publishing Emotions</p>
+                <p className="text-xs text-primary font-medium">Publishing Emotions</p>
               </div>
             </div>
             <p className="text-gray-700 text-sm leading-relaxed font-body">
               Building a community of passionate writers and storytellers. We don't just publish pages—we publish emotions, dreams, and legacies.
             </p>
             <div className="mt-4 flex items-center space-x-2 text-sm text-gray-600">
-              <Award className="w-4 h-4 text-accent-gold" />
+              <Award className="w-4 h-4 text-primary" />
               <span className="font-medium">MSME Registered</span>
             </div>
           </motion.div>
@@ -55,7 +55,7 @@ const Footer = () => {
           <motion.div variants={itemVariants}>
             <h4 className="text-lg font-serif font-semibold text-gray-800 mb-4 flex items-center">
               Quick Links
-              <span className="ml-2 h-0.5 flex-1 bg-gradient-to-r from-accent-gold/50 to-transparent"></span>
+              <span className="ml-2 h-0.5 flex-1 bg-gradient-to-r from-primary/50 to-transparent"></span>
             </h4>
             <ul className="space-y-2">
               {[
@@ -72,7 +72,7 @@ const Footer = () => {
                     to={link.to}
                     className="text-gray-600 hover:text-primary font-sans text-sm transition-all duration-300 inline-flex items-center group"
                   >
-                    <span className="w-0 h-0.5 bg-accent-gold group-hover:w-4 transition-all duration-300 mr-0 group-hover:mr-2"></span>
+                    <span className="w-0 h-0.5 bg-primary group-hover:w-4 transition-all duration-300 mr-0 group-hover:mr-2"></span>
                     {link.label}
                   </Link>
                 </li>
@@ -84,7 +84,7 @@ const Footer = () => {
           <motion.div variants={itemVariants}>
             <h4 className="text-lg font-serif font-semibold text-gray-800 mb-4 flex items-center">
               Connect With Us
-              <span className="ml-2 h-0.5 flex-1 bg-gradient-to-r from-accent-gold/50 to-transparent"></span>
+              <span className="ml-2 h-0.5 flex-1 bg-gradient-to-r from-primary/50 to-transparent"></span>
             </h4>
             <ul className="space-y-3">
               <li>
@@ -92,7 +92,7 @@ const Footer = () => {
                   href="mailto:info@mmscripts.com"
                   className="text-gray-600 hover:text-primary transition-colors text-sm flex items-center space-x-3 group"
                 >
-                  <Mail className="w-5 h-5 text-accent-gold group-hover:scale-110 transition-transform" />
+                  <Mail className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" />
                   <span className="font-sans">info@mmscripts.com</span>
                 </a>
               </li>
@@ -101,7 +101,7 @@ const Footer = () => {
                   href="tel:+1234567890"
                   className="text-gray-600 hover:text-primary transition-colors text-sm flex items-center space-x-3 group"
                 >
-                  <Phone className="w-5 h-5 text-accent-gold group-hover:scale-110 transition-transform" />
+                  <Phone className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" />
                   <span className="font-sans">+1 (234) 567-890</span>
                 </a>
               </li>
@@ -144,7 +144,7 @@ const Footer = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5 }}
-          className="border-t border-accent-gold/20 mt-10 pt-6 text-center"
+          className="border-t border-primary/20 mt-10 pt-6 text-center"
         >
           <p className="text-gray-600 text-sm font-sans">
             © {currentYear} <span className="font-semibold text-primary">MMSCRIPTS</span>. All rights reserved. Crafted with ❤️ for storytellers.

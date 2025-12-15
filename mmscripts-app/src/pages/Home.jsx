@@ -43,26 +43,10 @@ const Home = () => {
   ];
 
   return (
-    <div className="bg-literary-cream">
+    <div className="bg-white">
       {/* Hero Section with Background */}
-      <section className="relative min-h-[600px] flex items-center overflow-hidden">
+      <section className="relative min-h-[600px] flex items-center overflow-hidden bg-white">
         {/* Background with overlay */}
-        <div className="absolute inset-0 bg-gradient-primary"></div>
-        <div className="absolute inset-0 bg-literary-texture opacity-10"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-900/50 via-primary-700/30 to-transparent"></div>
-        
-        {/* Floating decorative elements */}
-        <motion.div
-          animate={{ y: [0, -20, 0] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-20 left-10 w-32 h-32 bg-white/5 rounded-full blur-3xl"
-        />
-        <motion.div
-          animate={{ y: [0, 20, 0] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute bottom-20 right-10 w-48 h-48 bg-accent-gold/10 rounded-full blur-3xl"
-        />
-
         <div className="container mx-auto px-4 lg:px-8 py-20 lg:py-32 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
             {/* Left Column - Text Content */}
@@ -70,14 +54,14 @@ const Home = () => {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-white order-2 lg:order-1"
+              className="order-2 lg:order-1"
             >
               {/* MSME Badge */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-6 py-3 rounded-full mb-8 border border-white/20"
+                className="inline-flex items-center space-x-2 bg-blue-50 px-6 py-3 rounded-full mb-8 border border-primary/20"
               >
                 <Sparkles className="w-5 h-5 text-yellow-400 animate-pulse" />
                 <span className="font-sans text-sm font-medium text-primary">MSME Registered Publishing House</span>
@@ -88,11 +72,11 @@ const Home = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-4xl lg:text-5xl xl:text-6xl font-serif font-bold mb-6 leading-tight text-primary"
+                className="text-4xl lg:text-5xl xl:text-6xl font-serif font-bold mb-6 leading-tight text-gray-800"
                 style={{ fontFamily: 'Playfair Display, Georgia, serif' }}
               >
                 Publishing emotions,<br />
-                <span className="text-yellow-400">not just pages.</span>
+                <span className="text-primary">not just pages.</span>
               </motion.h1>
               
               {/* Description */}
@@ -100,7 +84,7 @@ const Home = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                className="text-lg lg:text-xl mb-10 leading-relaxed text-gray-700"
+                className="text-lg lg:text-xl mb-10 leading-relaxed text-gray-600"
                 style={{ fontFamily: 'Lora, Georgia, serif' }}
               >
                 MMSCRIPTS is where stories come alive. We empower authors, nurture creativity, 
@@ -158,9 +142,6 @@ const Home = () => {
             </motion.div>
           </div>
         </div>
-        
-        {/* Bottom fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-literary-cream to-transparent"></div>
       </section>
 
       {/* About Snapshot */}
@@ -179,7 +160,7 @@ const Home = () => {
             <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}>
               <h2 className="text-3xl lg:text-4xl font-serif font-bold text-gray-800 mb-4 inline-block relative" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
                 Our Story
-                <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-yellow-500 to-transparent"></span>
+                <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent"></span>
               </h2>
             </motion.div>
             
@@ -213,11 +194,8 @@ const Home = () => {
       </section>
 
       {/* Services Preview */}
-      <section className="py-16 lg:py-24 bg-literary-parchment relative overflow-hidden">
-        {/* Decorative background */}
-        <div className="absolute inset-0 bg-literary-texture opacity-30"></div>
-        
-        <div className="container mx-auto px-4 lg:px-8 relative z-10">
+      <section className="py-16 lg:py-24 bg-gray-50">
+        <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -230,7 +208,7 @@ const Home = () => {
           >
             <h2 className="text-3xl lg:text-4xl font-serif font-bold text-gray-800 mb-4 inline-block relative" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
               Our Services
-              <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-yellow-500 to-transparent"></span>
+              <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent"></span>
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto" style={{ fontFamily: 'Lora, Georgia, serif' }}>
               Comprehensive publishing solutions tailored to bring your literary dreams to life.
@@ -274,21 +252,8 @@ const Home = () => {
       </section>
 
       {/* Achievements Highlight */}
-      <section className="py-16 lg:py-24 bg-gradient-primary text-[#014aad] relative overflow-hidden">
-        {/* Background decorations */}
-        <div className="absolute inset-0 bg-literary-texture opacity-5"></div>
-        <motion.div
-          animate={{ rotate: 360 }}
-          transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
-          className="absolute -top-20 -right-20 w-64 h-64 bg-white/5 rounded-full blur-3xl"
-        />
-        <motion.div
-          animate={{ rotate: -360 }}
-          transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-          className="absolute -bottom-20 -left-20 w-80 h-80 bg-accent-gold/10 rounded-full blur-3xl"
-        />
-
-        <div className="container mx-auto px-4 lg:px-8 relative z-10">
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -301,22 +266,22 @@ const Home = () => {
           >
             <motion.h2
               variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
-              className="text-3xl lg:text-4xl font-serif font-bold mb-6 text-black inline-block relative"
+              className="text-3xl lg:text-4xl font-serif font-bold mb-6 text-gray-800 inline-block relative"
               style={{ fontFamily: 'Playfair Display, Georgia, serif' }}
             >
               Our Achievements
-              <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-yellow-500 to-transparent"></span>
+              <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent"></span>
             </motion.h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
               <motion.div
                 variants={{ hidden: { opacity: 0, scale: 0.9 }, visible: { opacity: 1, scale: 1 } }}
                 whileHover={{ scale: 1.05, y: -5 }}
-                className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 shadow-2xl hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.4)] transition-all duration-300"
+                className="bg-blue-50 p-8 rounded-xl border border-primary/20 shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                <Award className="w-16 h-16 mb-4 mx-auto text-yellow-400" />
-                <h3 className="text-2xl font-serif font-bold mb-3" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>InkStreak Writing Challenge</h3>
-                <p className="text-gray-700 leading-relaxed" style={{ fontFamily: 'Lora, Georgia, serif' }}>
+                <Award className="w-16 h-16 mb-4 mx-auto text-primary" />
+                <h3 className="text-2xl font-serif font-bold mb-3 text-gray-800" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>InkStreak Writing Challenge</h3>
+                <p className="text-gray-600 leading-relaxed" style={{ fontFamily: 'Lora, Georgia, serif' }}>
                   Our flagship initiative encouraging writers to maintain consistency 
                   and develop their craft through daily writing practice.
                 </p>
@@ -325,11 +290,11 @@ const Home = () => {
               <motion.div
                 variants={{ hidden: { opacity: 0, scale: 0.9 }, visible: { opacity: 1, scale: 1 } }}
                 whileHover={{ scale: 1.05, y: -5 }}
-                className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 shadow-2xl hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.4)] transition-all duration-300"
+                className="bg-blue-50 p-8 rounded-xl border border-primary/20 shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                <BookOpen className="w-16 h-16 mb-4 mx-auto text-yellow-400" />
-                <h3 className="text-2xl font-serif font-bold mb-3" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>Amazon eBook Milestone</h3>
-                <p className="text-gray-700 leading-relaxed" style={{ fontFamily: 'Lora, Georgia, serif' }}>
+                <BookOpen className="w-16 h-16 mb-4 mx-auto text-primary" />
+                <h3 className="text-2xl font-serif font-bold mb-3 text-gray-800" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>Amazon eBook Milestone</h3>
+                <p className="text-gray-600 leading-relaxed" style={{ fontFamily: 'Lora, Georgia, serif' }}>
                   Successfully helping authors publish and reach readers worldwide 
                   through Amazon's global platform.
                 </p>
@@ -367,7 +332,7 @@ const Home = () => {
               style={{ fontFamily: 'Playfair Display, Georgia, serif' }}
             >
               Join Our Writing Community
-              <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-yellow-500 to-transparent"></span>
+              <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent"></span>
             </motion.h2>
             
             <motion.p
@@ -383,7 +348,7 @@ const Home = () => {
             
             <motion.blockquote
               variants={{ hidden: { opacity: 0, scale: 0.95 }, visible: { opacity: 1, scale: 1 } }}
-              className="text-xl italic text-primary mb-8 border-l-4 border-yellow-500 pl-6 py-4 bg-orange-50 rounded-r-lg shadow-md font-serif"
+              className="text-xl italic text-primary mb-8 border-l-4 border-primary pl-6 py-4 bg-blue-50 rounded-r-lg shadow-md font-serif"
               style={{ fontFamily: 'Playfair Display, Georgia, serif' }}
             >
               "Every writer has a unique voice. Our mission is to help you find yours 

@@ -66,7 +66,7 @@ const Header = () => {
                   to={item.path}
                   className={`relative px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 group overflow-hidden ${
                     isActive(item.path)
-                      ? 'text-primary'
+                      ? 'text-white'
                       : 'text-gray-700 hover:text-white'
                   }`}
                 >
