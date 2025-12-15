@@ -33,6 +33,7 @@ const Books = () => {
       language: 'English',
       availability: 'In Stock',
       stockCount: 45,
+      price: 349,
       details: {
         pages: 368,
         publisher: 'MMSCRIPTS Publishing',
@@ -54,6 +55,7 @@ const Books = () => {
       language: 'English',
       availability: 'In Stock',
       stockCount: 28,
+      price: 299,
       details: {
         pages: 312,
         publisher: 'MMSCRIPTS Publishing',
@@ -75,6 +77,7 @@ const Books = () => {
       language: 'English',
       availability: 'Limited Stock',
       stockCount: 8,
+      price: 249,
       details: {
         pages: 156,
         publisher: 'MMSCRIPTS Publishing',
@@ -96,6 +99,7 @@ const Books = () => {
       language: 'English',
       availability: 'In Stock',
       stockCount: 52,
+      price: 499,
       details: {
         pages: 284,
         publisher: 'MMSCRIPTS Publishing',
@@ -117,6 +121,7 @@ const Books = () => {
       language: 'English',
       availability: 'In Stock',
       stockCount: 34,
+      price: 599,
       details: {
         pages: 542,
         publisher: 'MMSCRIPTS Publishing',
@@ -138,6 +143,7 @@ const Books = () => {
       language: 'English',
       availability: 'In Stock',
       stockCount: 19,
+      price: 399,
       details: {
         pages: 296,
         publisher: 'MMSCRIPTS Publishing',
@@ -332,57 +338,50 @@ const Books = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group"
                 >
-                  <div className="relative group">
+                  <div className="relative overflow-hidden">
                     <img
                       src={book.cover}
                       alt={book.title}
-                      className="w-full h-96 object-cover"
+                      className="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
-                    <div className="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-xs font-semibold">
+                    {/* Featured Badge */}
+                    <div className="absolute top-4 right-4 bg-yellow-500 text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-lg">
                       Featured
                     </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6 gap-2">
+                    {/* Genre Badge */}
+                    <div className="absolute top-4 left-4">
+                      <span className="bg-primary text-white px-3 py-1.5 rounded-md text-xs font-semibold">
+                        {book.genre}
+                      </span>
+                    </div>
+                    {/* Quick View Button Overlay */}
+                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                       <button
                         onClick={() => handleQuickView(book)}
-                        className="bg-white text-primary px-4 py-2 rounded-lg font-semibold flex items-center gap-2 hover:bg-blue-50 transition-colors transform translate-y-4 group-hover:translate-y-0 duration-300"
+                        className="bg-white text-primary px-6 py-3 rounded-lg text-sm font-semibold hover:bg-gray-100 transition-colors transform scale-90 group-hover:scale-100 duration-300"
                       >
-                        <Eye size={18} />
                         Quick View
-                      </button>
-                      <button
-                        onClick={() => handleBuyNow(book)}
-                        className="bg-primary text-white px-4 py-2 rounded-lg font-semibold flex items-center gap-2 hover:bg-blue-700 transition-colors transform translate-y-4 group-hover:translate-y-0 duration-300 border-2 border-white"
-                      >
-                        <ExternalLink size={18} />
-                        Buy Now
                       </button>
                     </div>
                   </div>
                   <div className="p-6">
-                    <p className="text-sm text-primary font-semibold mb-2">{book.genre}</p>
-                    <h3 className="text-xl font-bold text-gray-800 mb-2">{book.title}</h3>
-                    <p className="text-sm text-gray-600 mb-3">by {book.author}</p>
+                    <h3 className="text-xl font-bold text-primary mb-2 line-clamp-2 min-h-[3.5rem]">{book.title}</h3>
+                    <p className="text-sm text-gray-700 mb-3">by {book.author}</p>
                     <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">
                       {book.description}
                     </p>
-                    <div className="flex gap-2">
-                      <button
-                        onClick={() => handleQuickView(book)}
-                        className="flex-1 flex items-center justify-center gap-2 bg-gray-100 text-gray-800 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors duration-300"
-                      >
-                        <Eye size={16} />
-                        Quick View
-                      </button>
-                      <button
-                        onClick={() => handleBuyNow(book)}
-                        className="flex-1 flex items-center justify-center gap-2 bg-primary text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors duration-300"
-                      >
-                        <ExternalLink size={16} />
-                        Buy Now
-                      </button>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="text-2xl font-bold text-primary">₹{book.price}</div>
+                      <div className="text-xs text-gray-600 uppercase font-semibold">{book.language}</div>
                     </div>
+                    <button
+                      onClick={() => handleBuyNow(book)}
+                      className="w-full bg-primary text-white px-4 py-3 rounded-lg text-sm font-semibold hover:bg-blue-700 transition-colors duration-300"
+                    >
+                      Buy Now
+                    </button>
                   </div>
                 </motion.div>
               ))}
@@ -423,66 +422,38 @@ const Books = () => {
                     alt={book.title}
                     className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  {/* Availability Badge */}
+                  {/* Genre Badge */}
                   <div className="absolute top-3 left-3">
-                    {book.availability === 'In Stock' && book.stockCount > 10 ? (
-                      <span className="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                        In Stock
-                      </span>
-                    ) : book.availability === 'In Stock' && book.stockCount <= 10 ? (
-                      <span className="bg-yellow-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                        Only {book.stockCount} left
-                      </span>
-                    ) : book.availability === 'Limited Stock' ? (
-                      <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                        Limited Stock
-                      </span>
-                    ) : (
-                      <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                        Pre-order
-                      </span>
-                    )}
+                    <span className="bg-primary text-white px-3 py-1.5 rounded-md text-xs font-semibold">
+                      {book.genre}
+                    </span>
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4 gap-2">
+                  {/* Quick View Button Overlay */}
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <button
                       onClick={() => handleQuickView(book)}
-                      className="bg-white text-primary px-3 py-2 rounded-lg text-sm font-semibold flex items-center gap-1 hover:bg-blue-50 transition-colors transform translate-y-4 group-hover:translate-y-0 duration-300"
+                      className="bg-white text-primary px-6 py-3 rounded-lg text-sm font-semibold hover:bg-gray-100 transition-colors transform scale-90 group-hover:scale-100 duration-300"
                     >
-                      <Eye size={16} />
-                      View
-                    </button>
-                    <button
-                      onClick={() => handleBuyNow(book)}
-                      className="bg-primary text-white px-3 py-2 rounded-lg text-sm font-semibold flex items-center gap-1 hover:bg-blue-700 transition-colors transform translate-y-4 group-hover:translate-y-0 duration-300 border-2 border-white"
-                    >
-                      <ExternalLink size={16} />
-                      Buy
+                      Quick View
                     </button>
                   </div>
                 </div>
                 <div className="p-5">
-                  <p className="text-xs text-primary font-semibold mb-1">{book.genre}</p>
-                  <h3 className="text-lg font-bold text-gray-800 mb-1 line-clamp-1">{book.title}</h3>
-                  <p className="text-sm text-gray-600 mb-3">by {book.author}</p>
-                  <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-2">
+                  <h3 className="text-lg font-bold text-primary mb-1.5 line-clamp-2 min-h-[3.5rem]">{book.title}</h3>
+                  <p className="text-sm text-gray-700 mb-3">by {book.author}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">
                     {book.description}
                   </p>
-                  <div className="flex gap-2">
-                    <button
-                      onClick={() => handleQuickView(book)}
-                      className="flex-1 flex items-center justify-center gap-1 bg-gray-100 text-gray-800 px-3 py-2 rounded-lg text-xs font-medium hover:bg-gray-200 transition-colors duration-300"
-                    >
-                      <Eye size={14} />
-                      Quick View
-                    </button>
-                    <button
-                      onClick={() => handleBuyNow(book)}
-                      className="flex-1 flex items-center justify-center gap-1 bg-primary text-white px-3 py-2 rounded-lg text-xs font-medium hover:bg-blue-700 transition-colors duration-300"
-                    >
-                      <ExternalLink size={14} />
-                      Buy Now
-                    </button>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="text-2xl font-bold text-primary">₹{book.price}</div>
+                    <div className="text-xs text-gray-600 uppercase font-semibold">{book.language}</div>
                   </div>
+                  <button
+                    onClick={() => handleBuyNow(book)}
+                    className="w-full bg-primary text-white px-4 py-3 rounded-lg text-sm font-semibold hover:bg-blue-700 transition-colors duration-300"
+                  >
+                    Buy Now
+                  </button>
                 </div>
               </motion.div>
             ))}

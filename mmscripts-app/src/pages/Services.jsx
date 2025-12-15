@@ -173,7 +173,7 @@ const Services = () => {
             <p className="text-xl text-blue-100 mb-8 leading-relaxed">
               Ready to start your publishing journey? Get in touch with us today for a free consultation.
             </p>
-            <Button to="/contact" className="bg-white text-primary hover:bg-gray-100">
+            <Button to="/contact" variant="outline" className="bg-white text-primary hover:bg-gray-100">
               Contact Us Now
             </Button>
           </motion.div>

@@ -183,10 +183,10 @@ const About = () => {
               Join hundreds of authors who have trusted MMSCRIPTS with their literary dreams.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button to="/services" className="bg-white text-primary hover:bg-gray-100">
+              <Button to="/services" variant="outline" className="bg-white">
                 Explore Services
               </Button>
-              <Button to="/contact" variant="outline">
+              <Button to="/contact" variant="outline" className="bg-white">
                 Contact Us Today
               </Button>
             </div>

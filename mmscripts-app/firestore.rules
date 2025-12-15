@@ -1,0 +1,92 @@
+# Firestore Security Rules for MMScripts Admin Portal
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper function to check if user is authenticated
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    
+    // Helper function to check if user is in whitelist
+    function isWhitelisted() {
+      return isSignedIn() && 
+             exists(/databases/$(database)/documents/allowed_users/$(request.auth.token.email));
+    }
+    
+    // Helper function to check if user is super admin
+    function isSuperAdmin() {
+      return isWhitelisted() && 
+             get(/databases/$(database)/documents/allowed_users/$(request.auth.token.email)).data.role == 'super_admin';
+    }
+    
+    // Helper function to check if user is staff or super admin
+    function isStaff() {
+      return isWhitelisted() && 
+             (get(/databases/$(database)/documents/allowed_users/$(request.auth.token.email)).data.role == 'staff' ||
+              get(/databases/$(database)/documents/allowed_users/$(request.auth.token.email)).data.role == 'super_admin');
+    }
+    
+    // Public read access to books for the public website
+    // Anyone can view books on the public site
+    // Only authenticated staff and super admins can add/edit/delete
+    match /books/{bookId} {
+      allow read: if true; // Public read for website
+      allow create: if isStaff(); // Staff and super admin can create
+      allow update: if isStaff(); // Staff and super admin can update
+      allow delete: if isStaff(); // Staff and super admin can delete
+    }
+    
+    // Only super admins can manage the user whitelist
+    // Regular staff can read to see who has access
+    match /allowed_users/{email} {
+      allow read: if isWhitelisted(); // All whitelisted users can see the list
+      allow create: if isSuperAdmin(); // Only super admin can add new users
+      allow update: if isSuperAdmin(); // Only super admin can update roles
+      allow delete: if isSuperAdmin(); // Only super admin can remove users
+    }
+    
+    // Deny all other collections by default
+    // Add specific rules here for other collections if needed
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
+
+/* 
+  SETUP INSTRUCTIONS:
+  
+  1. Go to Firebase Console → Firestore Database → Rules tab
+  2. Copy this entire content
+  3. Paste into the rules editor
+  4. Click "Publish"
+  
+  TESTING:
+  
+  Use the Firebase Rules Playground to test:
+  - Authenticated: Check "Authenticated" and enter test email
+  - Location: Enter path like /books/testbook or /allowed_users/test@example.com
+  - Test read/write operations
+  
+  ROLE STRUCTURE:
+  
+  Collection: allowed_users
+  Document ID: user_email@example.com
+  Fields:
+    - role: 'super_admin' | 'staff'
+    - addedAt: timestamp
+  
+  Example:
+  {
+    "admin@yoursite.com": {
+      "role": "super_admin",
+      "addedAt": "2025-12-15T10:00:00Z"
+    },
+    "staff@yoursite.com": {
+      "role": "staff",
+      "addedAt": "2025-12-15T11:00:00Z"
+    }
+  }
+*/

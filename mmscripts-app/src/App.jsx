@@ -10,26 +10,112 @@ import Achievements from './pages/Achievements';
 import Team from './pages/Team';
 import Contact from './pages/Contact';
 
+// Admin imports
+import { AuthProvider } from './contexts/AuthContext';
+import AdminLogin from './pages/admin/AdminLogin';
+import AdminLayout from './pages/admin/AdminLayout';
+import AdminDashboard from './pages/admin/AdminDashboard';
+import ManageBooks from './pages/admin/ManageBooks';
+import ManageUsers from './pages/admin/ManageUsers';
+import ProtectedRoute from './components/admin/ProtectedRoute';
+
 function App() {
   return (
-    <Router>
-      <div className="min-h-screen flex flex-col bg-white">
-        <Header />
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/books" element={<Books />} />
-            <Route path="/articles" element={<Articles />} />
-            <Route path="/achievements" element={<Achievements />} />
-            <Route path="/team" element={<Team />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+    <AuthProvider>
+      <Router>
+        <Routes>
+          {/* Public Routes */}
+          <Route path="/" element={
+            <div className="min-h-screen flex flex-col bg-white">
+              <Header />
+              <main className="flex-grow">
+                <Home />
+              </main>
+              <Footer />
+            </div>
+          } />
+          <Route path="/about" element={
+            <div className="min-h-screen flex flex-col bg-white">
+              <Header />
+              <main className="flex-grow">
+                <About />
+              </main>
+              <Footer />
+            </div>
+          } />
+          <Route path="/services" element={
+            <div className="min-h-screen flex flex-col bg-white">
+              <Header />
+              <main className="flex-grow">
+                <Services />
+              </main>
+              <Footer />
+            </div>
+          } />
+          <Route path="/books" element={
+            <div className="min-h-screen flex flex-col bg-white">
+              <Header />
+              <main className="flex-grow">
+                <Books />
+              </main>
+              <Footer />
+            </div>
+          } />
+          <Route path="/articles" element={
+            <div className="min-h-screen flex flex-col bg-white">
+              <Header />
+              <main className="flex-grow">
+                <Articles />
+              </main>
+              <Footer />
+            </div>
+          } />
+          <Route path="/achievements" element={
+            <div className="min-h-screen flex flex-col bg-white">
+              <Header />
+              <main className="flex-grow">
+                <Achievements />
+              </main>
+              <Footer />
+            </div>
+          } />
+          <Route path="/team" element={
+            <div className="min-h-screen flex flex-col bg-white">
+              <Header />
+              <main className="flex-grow">
+                <Team />
+              </main>
+              <Footer />
+            </div>
+          } />
+          <Route path="/contact" element={
+            <div className="min-h-screen flex flex-col bg-white">
+              <Header />
+              <main className="flex-grow">
+                <Contact />
+              </main>
+              <Footer />
+            </div>
+          } />
+
+          {/* Admin Routes - Hidden from public */}
+          <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/admin" element={
+            <ProtectedRoute>
+              <AdminLayout />
+            </ProtectedRoute>
+          }>
+            <Route index element={<AdminDashboard />} />
+            <Route path="books" element={<ManageBooks />} />
+            <Route path="users" element={
+              <ProtectedRoute requireSuperAdmin={true}>
+                <ManageUsers />
+              </ProtectedRoute>
+            } />
+          </Route>
+        </Routes>
+      </Router>
+    </AuthProvider>
   );
 }
 
