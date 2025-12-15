@@ -34,8 +34,12 @@ const Footer = () => {
           {/* Brand Section */}
           <motion.div variants={itemVariants}>
             <div className="flex items-center space-x-3 mb-4 group">
-              <div className="w-12 h-12 bg-gradient-primary rounded-lg shadow-elegant flex items-center justify-center group-hover:shadow-elegant-lg group-hover:scale-105 transition-all duration-300">
-                <BookOpen className="w-6 h-6 text-white" strokeWidth={2.5} />
+              <div className="w-12 h-12  rounded-lg shadow-elegant flex items-center justify-center group-hover:shadow-elegant-lg group-hover:scale-105 transition-all duration-300">
+                 <img 
+                    src="/MMSCRIPTS_Transparent.png" 
+                    alt="MMSCRIPTS Logo" 
+                    className="w-full h-full object-contain"
+                  />
               </div>
               <div>
                 <h3 className="text-2xl font-serif font-bold text-primary">MMSCRIPTS</h3>
