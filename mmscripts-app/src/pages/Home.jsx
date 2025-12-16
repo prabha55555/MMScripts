@@ -305,7 +305,7 @@ const Home = () => {
               variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
               className="mt-12"
             >
-              <Button to="/achievements" className="bg-primary text-secondary hover:bg-literary-cream hover:shadow-elegant transition-all">
+              <Button to="/achievements" className="bg-primary text-secondary  hover:shadow-elegant transition-all">
                 Explore Our Journey
               </Button>
             </motion.div>

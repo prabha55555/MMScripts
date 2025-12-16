@@ -93,20 +93,20 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="mailto:info@mmscripts.com"
+                  href="mailto:mmscriptspublishinghouse@gmail.com"
                   className="text-gray-600 hover:text-primary transition-colors text-sm flex items-center space-x-3 group"
                 >
                   <Mail className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" />
-                  <span className="font-sans">info@mmscripts.com</span>
+                  <span className="font-sans">mmscriptspublishinghouse@gmail.com</span>
                 </a>
               </li>
               <li>
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+9384935435"
                   className="text-gray-600 hover:text-primary transition-colors text-sm flex items-center space-x-3 group"
                 >
                   <Phone className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" />
-                  <span className="font-sans">+1 (234) 567-890</span>
+                  <span className="font-sans">+91 9384935435</span>
                 </a>
               </li>
             </ul>
@@ -118,7 +118,7 @@ const Footer = () => {
                 <motion.a
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   whileTap={{ scale: 0.95 }}
-                  href="https://instagram.com/mmscripts"
+                  href="https://www.instagram.com/mmscripts?igsh=OGhuczhibTFueWNy"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-white rounded-lg shadow-md hover:shadow-elegant flex items-center justify-center text-gray-600 hover:text-primary transition-all duration-300 group"
@@ -129,7 +129,7 @@ const Footer = () => {
                 <motion.a
                   whileHover={{ scale: 1.1, rotate: -5 }}
                   whileTap={{ scale: 0.95 }}
-                  href="https://wa.me/1234567890"
+                  href="https://chat.whatsapp.com/D1baHxfuVOY8x5Ab0savze "
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-white rounded-lg shadow-md hover:shadow-elegant flex items-center justify-center text-gray-600 hover:text-primary transition-all duration-300 group"

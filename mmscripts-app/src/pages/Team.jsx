@@ -9,45 +9,52 @@ const Team = () => {
 
   const team = [
     {
-      name: 'Founder & CEO',
-      role: 'Visionary Leader',
-      photo: 'https://via.placeholder.com/400x400/014aad/ffffff?text=Founder',
-      bio: 'A passionate advocate for writers and storytellers, our founder established MMSCRIPTS with a vision to democratize publishing and build a supportive author community.',
+      role: 'Founder & CEO',
+      name: 'Madhava',
+      photo: '/Madhava.png',
+      bio: 'A passionate advocate for writers and storytellers, Madhava established MMSCRIPTS with a vision to democratize publishing and empower authors to share their unique voices with the world.',
+      
       expertise: ['Publishing Strategy', 'Author Relations', 'Business Development']
     },
-    {
-      name: 'Lead Editor',
-      role: 'Editorial Director',
-      photo: 'https://via.placeholder.com/400x400/014aad/ffffff?text=Editor',
-      bio: 'With over 10 years of editorial experience, our Lead Editor ensures every manuscript meets professional standards while preserving the author\'s unique voice.',
-      expertise: ['Developmental Editing', 'Copy Editing', 'Manuscript Critique']
-    },
-    {
-      name: 'Design Head',
-      role: 'Creative Director',
-      photo: 'https://via.placeholder.com/400x400/014aad/ffffff?text=Designer',
-      bio: 'Our Creative Director brings stories to visual life through stunning cover designs and professional formatting that captures readers\' attention.',
-      expertise: ['Cover Design', 'Book Formatting', 'Brand Identity']
-    },
-    {
-      name: 'Marketing Manager',
-      role: 'Marketing & Outreach',
-      photo: 'https://via.placeholder.com/400x400/014aad/ffffff?text=Marketing',
-      bio: 'Specializing in book marketing and author branding, our Marketing Manager helps authors connect with their target audience and build lasting reader relationships.',
-      expertise: ['Digital Marketing', 'Social Media Strategy', 'Launch Campaigns']
-    },
-    {
-      name: 'Community Manager',
-      role: 'Community Engagement',
-      photo: 'https://via.placeholder.com/400x400/014aad/ffffff?text=Community',
-      bio: 'Dedicated to fostering connections and organizing events, our Community Manager ensures every author feels supported and valued within the MMSCRIPTS family.',
+     {
+      role: 'Chief Creative Officer ',
+      name: 'Varsha S',
+      photo: 'public/Varsha_S.jpeg',
+      bio:' Hai! I am Varsha, Chief Creative Officer committed to transforming ideas into meaningful, innovative outcomes with passion.',
+      
       expertise: ['Community Building', 'Event Planning', 'Author Support']
     },
     {
-      name: 'Publishing Coordinator',
-      role: 'Operations & Logistics',
-      photo: 'https://via.placeholder.com/400x400/014aad/ffffff?text=Coordinator',
-      bio: 'Managing the technical aspects of publishing from ISBN registration to distribution, our coordinator ensures a smooth and timely publishing process.',
+      role: 'Editorial Director',
+      name: 'Madhuvanthi V. Ra',
+      photo: 'public/Madhu.jpeg',
+      bio:'Hi, I’m Madhuvanthi V RA, Editorial Excellence Director — dedicated to elevating every manuscript through meticulous editing, proofreading, and quality checks.',
+      
+      expertise: ['Developmental Editing', 'Copy Editing', 'Manuscript Critique']
+    },
+    {
+      role: 'Publishing Workflow Strategist',
+      name: 'Sai Easwar S',
+      photo: 'public/Sai_Easwar.jpeg',
+      bio:' Hi, I’m Sai Easwar S., Publishing Workflow Strategist — focused on streamlining the entire publishing journey, from ISBNs to uploads, platform coordination, and approvals.',
+      
+      expertise: ['Cover Design', 'Book Formatting', 'Brand Identity']
+    },
+    {
+      role: ' Author Relations & Experience Manager',
+      name: 'Shivani L',
+      photo: 'public/Shivani.jpeg',
+      bio:'Hi, I am Shivani Lakshmanan! I work as an Author Relations and Experience Manager at MM Scripts. I help manage author relations, share updates and interact with the community to make sure everyone has a good experience.',
+      
+      expertise: ['Digital Marketing', 'Social Media Strategy', 'Launch Campaigns']
+    },
+   
+    {
+      role: 'Creative Programs & Community Director',
+      name: 'Varshini',
+      photo: 'public/Varshini.jpeg',
+      bio: 'Hi, I\'m Varshini. P, Creative Programs and Community Director - I work with a dedicated team to help authors turn their imagination into books',
+      
       expertise: ['Publishing Operations', 'Distribution Management', 'Quality Control']
     },
   ];
@@ -55,8 +62,21 @@ const Team = () => {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary to-blue-700 text-white py-20 lg:py-28">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="relative bg-gradient-to-br from-primary to-blue-700 text-white py-20 lg:py-28 overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('public/BooksBackground.jpg')",
+            opacity: 0.75
+          }}
+        ></div>
+        
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-blue-700/80"></div>
+        
+        {/* Content */}
+        <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <motion.div
             {...fadeInUp}
             className="max-w-4xl mx-auto text-center"
@@ -102,7 +122,7 @@ const Team = () => {
                   <img
                     src={member.photo}
                     alt={member.name}
-                    className="w-full h-80 object-cover transform hover:scale-110 transition-transform duration-500"
+                      className="w-full h-80 object-contain bg-gray-100 transform hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
                   <div className="absolute bottom-4 left-4 right-4 text-white">
@@ -176,8 +196,21 @@ const Team = () => {
       </section>
 
       {/* Join Our Team */}
-      <section className="py-16 lg:py-24 bg-primary text-white">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="relative py-16 lg:py-24 bg-primary text-white overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('public/BooksBackground.jpg')",
+            opacity: 0.75
+          }}
+        ></div>
+        
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-primary/80"></div>
+        
+        {/* Content */}
+        <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <motion.div
             {...fadeInUp}
             className="max-w-3xl mx-auto text-center"

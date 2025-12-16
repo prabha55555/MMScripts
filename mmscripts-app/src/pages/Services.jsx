@@ -74,8 +74,21 @@ const Services = () => {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary to-blue-700 text-white py-20 lg:py-28">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="relative bg-gradient-to-br from-primary to-blue-700 text-white py-20 lg:py-28 overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('public/BooksBackground.jpg')",
+            opacity: 0.75
+          }}
+        ></div>
+        
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-blue-700/80"></div>
+        
+        {/* Content */}
+        <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <motion.div
             {...fadeInUp}
             className="max-w-4xl mx-auto text-center"
@@ -161,8 +174,21 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-primary text-white">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="relative py-16 lg:py-24 bg-primary text-white overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('public/BooksBackground.jpg')",
+            opacity: 0.75
+          }}
+        ></div>
+        
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-primary/80"></div>
+        
+        {/* Content */}
+        <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <motion.div
             {...fadeInUp}
             className="max-w-3xl mx-auto text-center"

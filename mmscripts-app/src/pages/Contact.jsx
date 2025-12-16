@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
+
 const Contact = () => {
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
@@ -8,72 +9,57 @@ const Contact = () => {
     transition: { duration: 0.6 }
   };
 
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: ''
-  });
-
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Here you would typically send the form data to your backend or Firebase
-    console.log('Form submitted:', formData);
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
-    }, 3000);
-  };
-
   const contactInfo = [
     {
-      icon: '📧',
+      icon: '/EmailLogo.png',
       title: 'Email',
-      details: 'info@mmscripts.com',
-      link: 'mailto:info@mmscripts.com'
+      details: 'mmscriptspublishinghouse@gmail.com',
+      link: 'mailto:mmscriptspublishinghouse@gmail.com'
     },
     {
-      icon: '📱',
+      icon: '/PhoneLogo.png',
       title: 'Phone',
-      details: '+91 98765 43210',
-      link: 'tel:+919876543210'
+      details: '+91 9384935435',
+      link: 'tel:+9384935435'
     },
     {
-      icon: '📍',
+      icon: '/LocationLogo.png',
       title: 'Address',
-      details: 'Mumbai, Maharashtra, India',
-      link: null
+      details: 'Anaimalai 642104, Pollachi, Coimabatore',
+      link: 'https://www.google.com/maps/place/Anaimalai,+Tamil+Nadu+642104/@10.5820878,76.9239589,15z/data=!3m1!4b1!4m6!3m5!1s0x3ba83b9afe4e320f:0xf57279cf79b8e1c4!8m2!3d10.5820882!4d76.9342587!16zL20vMDg4bHl0?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D'
     },
     {
-      icon: '📷',
+      icon: '/InstaLogo.png',
       title: 'Instagram',
       details: '@mmscripts',
-      link: 'https://instagram.com/mmscripts'
+      link: 'https://www.instagram.com/mmscripts?igsh=OGhuczhibTFueWNy'
     },
     {
-      icon: '💬',
+      icon: '/WhatappLogo.png',
       title: 'WhatsApp Community',
       details: 'Join Our Writing Group',
-      link: 'https://wa.me/919876543210'
+      link: 'https://chat.whatsapp.com/GYbo9v7vDVsLxIqBgfzO3R'
     },
   ];
 
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary to-blue-700 text-white py-20 lg:py-28">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="relative bg-gradient-to-br from-primary to-blue-700 text-white py-20 lg:py-28 overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('public/BooksBackground.jpg')",
+            opacity: 0.75
+          }}
+        ></div>
+        
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-blue-700/80"></div>
+        
+        {/* Content */}
+        <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <motion.div
             {...fadeInUp}
             className="max-w-4xl mx-auto text-center"
@@ -99,7 +85,11 @@ const Contact = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
-                <div className="text-5xl mb-4">{info.icon}</div>
+                <img 
+                  src={info.icon} 
+                  alt={info.title} 
+                  className="w-16 h-16 mb-4 object-contain mx-auto"
+                />
                 <h3 className="text-xl font-bold text-gray-800 mb-3">{info.title}</h3>
                 {info.link ? (
                   <a
@@ -142,76 +132,62 @@ const Contact = () => {
               transition={{ duration: 0.6 }}
               className="bg-white p-8 lg:p-12 rounded-xl shadow-lg"
             >
-              {submitted ? (
-                <div className="text-center py-12">
-                  <div className="text-6xl mb-6">✅</div>
-                  <h3 className="text-2xl font-bold text-gray-800 mb-4">
-                    Thank You!
-                  </h3>
-                  <p className="text-gray-600">
-                    Your message has been sent successfully. We'll get back to you soon.
-                  </p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
-                        Full Name *
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        required
-                        value={formData.name}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                        placeholder="John Doe"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
-                        Email Address *
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        required
-                        value={formData.email}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                        placeholder="john@example.com"
-                      />
-                    </div>
+              <form action="https://formsubmit.co/k.prabhakaran.in@gmail.com" method="POST" className="space-y-6">
+                {/* FormSubmit Configuration */}
+                <input type="hidden" name="_subject" value="New Contact Form Submission from MMSCRIPTS" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_template" value="table" />
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
+                      Full Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                      placeholder="John Doe"
+                    />
                   </div>
+                  <div>
+                    <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
+                      Email Address *
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                      placeholder="john@example.com"
+                    />
+                  </div>
+                </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="phone" className="block text-gray-700 font-medium mb-2">
-                        Phone Number
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                        placeholder="+91 98765 43210"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="subject" className="block text-gray-700 font-medium mb-2">
-                        Subject *
-                      </label>
-                      <select
-                        id="subject"
-                        name="subject"
-                        required
-                        value={formData.subject}
-                        onChange={handleChange}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="phone" className="block text-gray-700 font-medium mb-2">
+                      Phone Number
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                      placeholder="+91 98765 43210"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="subject" className="block text-gray-700 font-medium mb-2">
+                      Subject *
+                    </label>
+                    <select
+                      id="subject"
+                      name="subject"
+                      required
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                       >
                         <option value="">Select a subject</option>
@@ -228,16 +204,14 @@ const Contact = () => {
                     <label htmlFor="message" className="block text-gray-700 font-medium mb-2">
                       Message *
                     </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      required
-                      value={formData.message}
-                      onChange={handleChange}
-                      rows="6"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
-                      placeholder="Tell us about your project or inquiry..."
-                    ></textarea>
+                  <textarea
+  id="message"
+  name="message"
+  required
+  rows="6"
+  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
+  placeholder="Tell us about your project or inquiry..."
+></textarea>
                   </div>
 
                   <div>
@@ -249,7 +223,7 @@ const Contact = () => {
                     </button>
                   </div>
                 </form>
-              )}
+              
             </motion.div>
           </div>
         </div>
@@ -290,8 +264,21 @@ const Contact = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-primary text-white">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="relative py-16 lg:py-24 bg-primary text-white overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('public/BooksBackground.jpg')",
+            opacity: 0.75
+          }}
+        ></div>
+        
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-primary/80"></div>
+        
+        {/* Content */}
+        <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <motion.div
             {...fadeInUp}
             className="max-w-3xl mx-auto text-center"
@@ -303,7 +290,7 @@ const Contact = () => {
               Join our WhatsApp community for instant updates, writing tips, and direct communication with our team.
             </p>
             <a
-              href="https://wa.me/919876543210"
+              href="https://chat.whatsapp.com/D1baHxfuVOY8x5Ab0savze"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-white text-primary px-8 py-4 rounded-lg font-medium hover:bg-gray-100 transition-colors duration-300"

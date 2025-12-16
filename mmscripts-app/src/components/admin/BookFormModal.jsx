@@ -9,7 +9,7 @@ const BookFormModal = ({ isOpen, onClose, book, onSave }) => {
     title: '',
     author: '',
     cover: '',
-    description: '',
+    description: '', 
     amazonLink: '',
     genre: '',
     language: 'English',
