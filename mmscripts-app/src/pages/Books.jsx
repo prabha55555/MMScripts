@@ -144,8 +144,8 @@ const Books = () => {
             </div>
 
             {/* Filters */}
-            <div className="flex flex-wrap gap-4 items-center justify-center">
-              <div className="flex items-center gap-2">
+            <div className="flex flex-col md:flex-row flex-wrap gap-3 md:gap-4 items-stretch md:items-center justify-center">
+              <div className="flex items-center gap-2 justify-center md:justify-start">
                 <Filter size={18} className="text-gray-600" />
                 <span className="text-sm font-medium text-gray-700">Filters:</span>
               </div>
@@ -154,7 +154,7 @@ const Books = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white text-sm"
+                className="w-full md:w-auto px-3 md:px-4 py-2.5 md:py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white text-sm"
               >
                 {categories.map(category => (
                   <option key={category} value={category}>
@@ -167,7 +167,7 @@ const Books = () => {
               <select
                 value={selectedAuthor}
                 onChange={(e) => setSelectedAuthor(e.target.value)}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white text-sm"
+                className="w-full md:w-auto px-3 md:px-4 py-2.5 md:py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white text-sm"
               >
                 {authors.map(author => (
                   <option key={author} value={author}>
@@ -180,7 +180,7 @@ const Books = () => {
               <select
                 value={selectedLanguage}
                 onChange={(e) => setSelectedLanguage(e.target.value)}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white text-sm"
+                className="w-full md:w-auto px-3 md:px-4 py-2.5 md:py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white text-sm"
               >
                 {languages.map(language => (
                   <option key={language} value={language}>
@@ -193,7 +193,7 @@ const Books = () => {
               {hasActiveFilters && (
                 <button
                   onClick={clearFilters}
-                  className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-300 transition-colors flex items-center gap-2"
+                  className="w-full md:w-auto px-3 md:px-4 py-2.5 md:py-2 bg-gray-200 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-300 transition-colors flex items-center justify-center gap-2"
                 >
                   <X size={16} />
                   Clear Filters
