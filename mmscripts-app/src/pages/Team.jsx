@@ -19,7 +19,7 @@ const Team = () => {
      {
       role: 'Chief Creative Officer ',
       name: 'Varsha S',
-      photo: 'public/Varsha_S.jpeg',
+      photo: '/Varsha_S.jpeg',
       bio:' Hai! I am Varsha, Chief Creative Officer committed to transforming ideas into meaningful, innovative outcomes with passion.',
       
       expertise: ['Community Building', 'Event Planning', 'Author Support']
@@ -27,7 +27,7 @@ const Team = () => {
     {
       role: 'Editorial Director',
       name: 'Madhuvanthi V. Ra',
-      photo: 'public/Madhu.jpeg',
+      photo: '/Madhu.jpeg',
       bio:'Hi, I’m Madhuvanthi V RA, Editorial Excellence Director — dedicated to elevating every manuscript through meticulous editing, proofreading, and quality checks.',
       
       expertise: ['Developmental Editing', 'Copy Editing', 'Manuscript Critique']
@@ -35,7 +35,7 @@ const Team = () => {
     {
       role: 'Publishing Workflow Strategist',
       name: 'Sai Easwar S',
-      photo: 'public/Sai_Easwar.jpeg',
+      photo: '/Sai_Easwar.jpeg',
       bio:' Hi, I’m Sai Easwar S., Publishing Workflow Strategist — focused on streamlining the entire publishing journey, from ISBNs to uploads, platform coordination, and approvals.',
       
       expertise: ['Cover Design', 'Book Formatting', 'Brand Identity']
@@ -43,7 +43,7 @@ const Team = () => {
     {
       role: ' Author Relations & Experience Manager',
       name: 'Shivani L',
-      photo: 'public/Shivani.jpeg',
+      photo: '/Shivani.jpeg',
       bio:'Hi, I am Shivani Lakshmanan! I work as an Author Relations and Experience Manager at MM Scripts. I help manage author relations, share updates and interact with the community to make sure everyone has a good experience.',
       
       expertise: ['Digital Marketing', 'Social Media Strategy', 'Launch Campaigns']
@@ -52,7 +52,7 @@ const Team = () => {
     {
       role: 'Creative Programs & Community Director',
       name: 'Varshini',
-      photo: 'public/Varshini.jpeg',
+      photo: '/Varshini.jpeg',
       bio: 'Hi, I\'m Varshini. P, Creative Programs and Community Director - I work with a dedicated team to help authors turn their imagination into books',
       
       expertise: ['Publishing Operations', 'Distribution Management', 'Quality Control']
@@ -67,7 +67,7 @@ const Team = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('public/BooksBackground.jpg')",
+            backgroundImage: "url('/BooksBackground.jpg')",
             opacity: 0.75
           }}
         ></div>
@@ -201,7 +201,7 @@ const Team = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('public/BooksBackground.jpg')",
+            backgroundImage: "url('/BooksBackground.jpg')",
             opacity: 0.75
           }}
         ></div>

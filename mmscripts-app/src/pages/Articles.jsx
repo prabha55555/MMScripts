@@ -25,7 +25,7 @@ Our mission is not just to help you publish a book. It's to help you build a wri
 As we embark on this journey together, I'm filled with excitement about the stories we'll help bring to life, the authors we'll empower, and the community we'll build. Publishing is more than just printing pages—it's about giving emotions, ideas, and experiences a permanent home in the world.
 
 Thank you for being part of our story. Let's write the next chapter together.`,
-      image: 'public/MMSCRIPTS_Transparent.png',
+      image: '/MMSCRIPTS_Transparent.png',
       category: 'Founders Note'
     },
     {
@@ -41,7 +41,7 @@ The concept is simple: write every day, no matter how much or how little. Whethe
 Studies show that writers who maintain a consistent practice are more likely to complete manuscripts, improve their skills faster, and find satisfaction in their creative journey. InkStreak provides the accountability and community support you need to make writing a non-negotiable part of your day.
 
 Join us in this challenge and discover what consistent writing can do for your creativity, productivity, and confidence as an author.`,
-      image: 'public/Ink.png',
+      image: '/Ink.png',
       category: 'Writing Tips'
     },
     {
@@ -68,7 +68,7 @@ Writing the book is only half the battle. Without a marketing plan, even the bes
 Traditional, self-publishing, hybrid—each has pros and cons. Understanding your options helps you make informed decisions aligned with your goals.
 
 At MMSCRIPTS, we guide authors through these challenges, ensuring your publishing journey is smooth, professional, and successful.`,
-      image: 'public/mistake.png',
+      image: '/mistake.png',
       category: 'Publishing Advice'
     },
   ]);
@@ -83,7 +83,7 @@ At MMSCRIPTS, we guide authors through these challenges, ensuring your publishin
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('public/BooksBackground.jpg')",
+            backgroundImage: "url('/BooksBackground.jpg')",
             opacity: 0.75
           }}
         ></div>

@@ -76,7 +76,7 @@ const Achievements = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('public/BooksBackground.jpg')",
+            backgroundImage: "url('/BooksBackground.jpg')",
             opacity: 0.75
           }}
         ></div>
@@ -165,7 +165,7 @@ const Achievements = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('public/BooksBackground.jpg')",
+            backgroundImage: "url('/BooksBackground.jpg')",
             opacity: 0.75
           }}
         ></div>
