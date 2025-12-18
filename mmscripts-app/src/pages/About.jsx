@@ -86,10 +86,7 @@ return (
                                 <span className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent"></span>
                             </h3>
                             <p className="text-gray-600 leading-relaxed">
-                                To build a thriving ecosystem where every writer—regardless of background, 
-                                experience, or genre—has the tools, support, and community needed to share 
-                                their stories with the world. We envision a future where publishing is not a 
-                                privilege but a right accessible to all storytellers.
+                               To build a thriving ecosystem where every writer regardless of background, experience, or genre has the tools, guidance, and community needed to refine their ideas and share their stories with the world. We believe publishing should not be a privilege, but an accessible journey where every storyteller is supported in turning manuscripts into masterpieces.
                             </p>
                         </motion.div>
 
@@ -104,10 +101,7 @@ return (
                                 <span className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent"></span>
                             </h3>
                             <p className="text-gray-600 leading-relaxed">
-                                To empower authors through professional publishing services, personalized 
-                                support, and a vibrant writing community. We're committed to delivering quality, 
-                                maintaining integrity, and fostering long-term relationships with every author 
-                                we work with.
+                                To empower writers by providing accessible, transparent, and high-quality publishing services that transform their stories into meaningful, professionally crafted books. We aim to simplify the publishing journey, support creative voices, and help authors reach readers with confidence.
                             </p>
                         </motion.div>
                     </div>

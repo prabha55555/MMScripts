@@ -151,7 +151,7 @@ const Footer = () => {
           className="border-t border-primary/20 mt-10 pt-6 text-center"
         >
           <p className="text-gray-600 text-sm font-sans">
-            © {currentYear} <span className="font-semibold text-primary">MMSCRIPTS</span>. All rights reserved. Crafted with ❤️ for storytellers.
+            © {currentYear} <span className="font-semibold text-primary">MMSCRIPTS</span>. All rights reserved. Crafted with 💙 for storytellers.
           </p>
         </motion.div>
       </div>

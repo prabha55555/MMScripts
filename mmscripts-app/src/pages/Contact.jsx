@@ -31,8 +31,10 @@ const Contact = () => {
     {
       icon: '/InstaLogo.png',
       title: 'Instagram',
-      details: '@mmscripts',
-      link: 'https://www.instagram.com/mmscripts?igsh=OGhuczhibTFueWNy'
+      details: '@mmscripts ',
+      details1: '@mmscripts_Writing_Community',
+      link: 'https://www.instagram.com/mmscripts?igsh=OGhuczhibTFueWNy',
+      link1: 'https://www.instagram.com/muthumalar_writing_community?igsh=MTg4dXhpeDVlaWFuZw=='
     },
     {
       icon: '/WhatappLogo.png',
@@ -92,14 +94,26 @@ const Contact = () => {
                 />
                 <h3 className="text-xl font-bold text-gray-800 mb-3">{info.title}</h3>
                 {info.link ? (
-                  <a
-                    href={info.link}
-                    target={info.link.startsWith('http') ? '_blank' : undefined}
-                    rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-                    className="text-primary hover:text-blue-700 transition-colors font-medium"
-                  >
-                    {info.details}
-                  </a>
+                  <div className="space-y-2">
+                    <a
+                      href={info.link}
+                      target={info.link.startsWith('http') ? '_blank' : undefined}
+                      rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+                      className="text-primary hover:text-blue-700 transition-colors font-medium block"
+                    >
+                      {info.details}
+                    </a>
+                    {info.details1 && info.link1 && (
+                      <a
+                        href={info.link1}
+                        target={info.link1.startsWith('http') ? '_blank' : undefined}
+                        rel={info.link1.startsWith('http') ? 'noopener noreferrer' : undefined}
+                        className="text-primary hover:text-blue-700 transition-colors font-medium block"
+                      >
+                        {info.details1}
+                      </a>
+                    )}
+                  </div>
                 ) : (
                   <p className="text-gray-600">{info.details}</p>
                 )}

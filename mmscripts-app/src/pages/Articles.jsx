@@ -9,48 +9,48 @@ const Articles = () => {
   };
 
   // Sample articles - Replace with Firebase data in production
-  const [articles] = useState([
+const [articles] = useState([
     {
-      id: 1,
-      title: 'Welcome to MMSCRIPTS: Our Journey Begins',
-      author: 'Founder, MMSCRIPTS',
-      date: 'December 1, 2025',
-      excerpt: 'Today marks the beginning of an exciting journey. MMSCRIPTS was born from a simple belief: every story deserves to be told, and every voice deserves to be heard...',
-      content: `Today marks the beginning of an exciting journey. MMSCRIPTS was born from a simple belief: every story deserves to be told, and every voice deserves to be heard.
+        id: 1,
+        title: 'Welcome to MMSCRIPTS: Our Journey Begins',
+        author: 'Founder, MMSCRIPTS',
+        date: 'December 1, 2025',
+        excerpt: 'Today marks the beginning of an exciting journey. MMSCRIPTS was born from a simple belief: every story deserves to be told, and every voice deserves to be heard...',
+        content: `Welcome to MMScripts!
 
-In an era where publishing has become more accessible yet more competitive than ever, we saw a need for a different kind of publishing house—one that puts authors first, values quality over quantity, and builds genuine community over mere transactions.
+What began as a simple passion for writing has grown into a dedicated space for writers to create, express, and publish with confidence. I started MMScripts with one belief — every voice deserves a platform, and every manuscript holds the potential to become a masterpiece.
 
-Our mission is not just to help you publish a book. It's to help you build a writing career, find your unique voice, and connect with readers who will cherish your work. We're here to demystify the publishing process, provide professional guidance, and support you every step of the way.
+Writers often struggle with the publishing process, facing confusion, delays, and uncertainty. MMScripts was created to make this journey smoother, transparent, and supportive. Here, authors are not just clients — they are creators we work with, guide, and celebrate.
 
-As we embark on this journey together, I'm filled with excitement about the stories we'll help bring to life, the authors we'll empower, and the community we'll build. Publishing is more than just printing pages—it's about giving emotions, ideas, and experiences a permanent home in the world.
+Our tagline, "Publishing emotions, not just pages," reflects our commitment to treating every book with care and purpose. From editing to design, from eBooks to hardcovers, our focus is always on quality, clarity, and honesty.
 
-Thank you for being part of our story. Let's write the next chapter together.`,
-      image: '/MMSCRIPTS_Transparent.png',
-      category: 'Founders Note'
+Thank you for trusting MMScripts with your stories. Together, let's continue turning ideas into impactful books and helping writers shine in their creative journeys.`,
+        image: '/MMSCRIPTS_Transparent.png',
+        category: 'Founders Note'
     },
     {
-      id: 2,
-      title: 'The Power of Consistent Writing: Introducing InkStreak',
-      author: 'Editorial Team',
-      date: 'December 5, 2025',
-      excerpt: 'Writing is not just about talent—it\'s about consistency. That\'s why we\'re launching the InkStreak Writing Challenge, a community initiative designed to help writers develop...',
-      content: `Writing is not just about talent—it's about consistency. That's why we're launching the InkStreak Writing Challenge, a community initiative designed to help writers develop a sustainable writing practice.
+        id: 2,
+        title: 'The Power of Consistent Writing: Introducing InkStreak',
+        author: 'Editorial Team',
+        date: 'December 5, 2025',
+        excerpt: 'Writing is not just about talent—it\'s about consistency. That\'s why we\'re launching the InkStreak Writing Challenge, a community initiative designed to help writers develop...',
+        content: `Writing is not just about talent—it's about consistency. That's why we're launching the InkStreak Writing Challenge, a community initiative designed to help writers develop a sustainable writing practice.
 
 The concept is simple: write every day, no matter how much or how little. Whether it's 100 words or 10,000, what matters is showing up. Over time, this consistency builds momentum, develops your craft, and transforms writing from an occasional hobby into a daily habit.
 
 Studies show that writers who maintain a consistent practice are more likely to complete manuscripts, improve their skills faster, and find satisfaction in their creative journey. InkStreak provides the accountability and community support you need to make writing a non-negotiable part of your day.
 
 Join us in this challenge and discover what consistent writing can do for your creativity, productivity, and confidence as an author.`,
-      image: '/Ink.png',
-      category: 'Writing Tips'
+        image: '/Ink.png',
+        category: 'Writing Tips'
     },
     {
-      id: 3,
-      title: '5 Common Mistakes First-Time Authors Make',
-      author: 'Editorial Team',
-      date: 'December 10, 2025',
-      excerpt: 'Publishing your first book is an exciting milestone, but it\'s easy to stumble along the way. Here are five common mistakes we see first-time authors make...',
-      content: `Publishing your first book is an exciting milestone, but it's easy to stumble along the way. Here are five common mistakes we see first-time authors make—and how to avoid them.
+        id: 3,
+        title: '5 Common Mistakes First-Time Authors Make',
+        author: 'Editorial Team',
+        date: 'December 10, 2025',
+        excerpt: 'Publishing your first book is an exciting milestone, but it\'s easy to stumble along the way. Here are five common mistakes we see first-time authors make...',
+        content: `Publishing your first book is an exciting milestone, but it's easy to stumble along the way. Here are five common mistakes we see first-time authors make—and how to avoid them.
 
 1. Skipping Professional Editing
 Many first-time authors underestimate the importance of professional editing. Your book is your calling card as a writer, and typos or structural issues can undermine even the best story.
@@ -68,10 +68,10 @@ Writing the book is only half the battle. Without a marketing plan, even the bes
 Traditional, self-publishing, hybrid—each has pros and cons. Understanding your options helps you make informed decisions aligned with your goals.
 
 At MMSCRIPTS, we guide authors through these challenges, ensuring your publishing journey is smooth, professional, and successful.`,
-      image: '/mistake.png',
-      category: 'Publishing Advice'
-    },
-  ]);
+        image: '/mistake.png',
+        category: 'Publishing Advice'
+    }
+]);
 
   const [selectedArticle, setSelectedArticle] = useState(null);
 
