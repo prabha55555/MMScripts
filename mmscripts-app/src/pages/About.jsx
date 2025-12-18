@@ -50,19 +50,16 @@ return (
                         
                         <div className="prose prose-lg max-w-none text-gray-600 space-y-6 leading-relaxed">
                             <p>
-                                MMSCRIPTS was founded with a singular vision: to democratize publishing and make 
-                                it accessible to every writer with a story to tell. In an industry often dominated 
-                                by gatekeepers, we saw the need for a publishing house that truly puts authors first.
+                             MMScripts Publishing House is a modern, author-focused publishing platform dedicated to helping writers transform their manuscripts into polished, professional books. As an MSME-registered company, we specialize in easy, transparent, and affordable publishing solutions for new and emerging authors. 
                             </p>
                             <p>
-                                As a registered MSME (Micro, Small & Medium Enterprise), we take pride in being 
-                                a nimble, author-centric organization. We're not just a service provider—we're 
-                                your publishing partner, invested in your success as much as you are.
+                               Our services cover the complete publishing journey — editing, formatting, cover design, ISBN support, eBook and paperback publishing, marketing assistance, and more. We aim to make publishing simple, fast, and accessible to everyone, regardless of their writing experience.
                             </p>
                             <p>
-                                What sets us apart is our holistic approach. We don't just help you publish a book; 
-                                we help you build a writing career. From the first draft to the final marketing push, 
-                                from manuscript development to reader engagement, we're with you every step of the way.
+                            At MMScripts, we believe every story deserves to be heard. With a supportive team, flexible packages, and a strong commitment to quality, we ensure each book receives the attention it deserves from start to finish.
+                            </p>
+                            <p>
+                                Whether you're publishing your first book or expanding your catalogue, MMScripts is your trusted partner for a smooth, stress-free, and fulfilling publishing experience.
                             </p>
                         </div>
                     </motion.div>

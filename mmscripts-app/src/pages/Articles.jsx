@@ -15,7 +15,7 @@ const [articles] = useState([
         title: 'Welcome to MMSCRIPTS: Our Journey Begins',
         author: 'Founder, MMSCRIPTS',
         date: 'December 1, 2025',
-        excerpt: 'Today marks the beginning of an exciting journey. MMSCRIPTS was born from a simple belief: every story deserves to be told, and every voice deserves to be heard...',
+        excerpt: 'What began as a simple passion for writing has grown into a dedicated space for writers to create, express, and publish with confidence. I started MMScripts with one belief — every voice deserves...',
         content: `Welcome to MMScripts!
 
 What began as a simple passion for writing has grown into a dedicated space for writers to create, express, and publish with confidence. I started MMScripts with one belief — every voice deserves a platform, and every manuscript holds the potential to become a masterpiece.

@@ -169,10 +169,8 @@ const Home = () => {
               className="text-lg text-gray-700 leading-relaxed mb-6 mt-8"
               style={{ fontFamily: 'Lora, Georgia, serif' }}
             >
-              MMSCRIPTS was born from a simple belief: every story deserves to be told, 
-              and every voice deserves to be heard. As an MSME-registered publishing house, 
-              we combine professional expertise with personal care to help authors transform 
-              their manuscripts into published works they can be proud of.
+             MMScripts Publishing House was created with a clear purpose: to make publishing simple, transparent, and accessible for writers at every stage of their journey. As an MSME-registered publishing platform, we focus on helping authors transform their manuscripts into polished, professional books they can confidently present to the world.
+
             </motion.p>
             
             <motion.p
@@ -180,8 +178,7 @@ const Home = () => {
               className="text-lg text-gray-700 leading-relaxed mb-10"
               style={{ fontFamily: 'Lora, Georgia, serif' }}
             >
-              Our vision is to create a supportive ecosystem where writers don't just publish books—they 
-              build careers, form lasting connections, and inspire readers around the world.
+             Our mission is to support writers through the complete publishing process—not just by publishing books, but by guiding them with reliable services, flexible solutions, and consistent quality.
             </motion.p>
             
             <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}>
