@@ -10,9 +10,9 @@ const Team = () => {
   const team = [
     {
       role: 'Founder & CEO',
-      name: 'Madhava',
+      name: 'Madhavaperiya Muthuselvan',
       photo: '/Madhava.png',
-      bio: 'A passionate advocate for writers and storytellers, Madhava established MMSCRIPTS with a vision to democratize publishing and empower authors to share their unique voices with the world.',
+      bio: 'Hi, I’m Madhavaperiya, a passionate advocate for writers and storytellers. With a deep belief that every voice matters, I strive to create a supportive, transparent, and author-friendly publishing space where stories are not just published, but truly valued.',
       
       expertise: ['Publishing Strategy', 'Author Relations', 'Business Development']
     },
@@ -83,7 +83,7 @@ const Team = () => {
           >
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">Meet Our Team</h1>
             <p className="text-xl text-blue-100 leading-relaxed">
-              The passionate professionals dedicated to bringing your stories to life.
+              Friends turned partners in the journey of publishing.
             </p>
           </motion.div>
         </div>

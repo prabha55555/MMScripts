@@ -124,7 +124,7 @@ At MMSCRIPTS, we guide authors through these challenges, ensuring your publishin
                       <img
                         src={article.image}
                         alt={article.title}
-                        className="w-full h-64 md:h-full object-cover"
+                        className="w-full h-48 md:h-full object-contain md:object-cover bg-gray-50"
                       />
                     </div>
                     <div className="md:w-3/5 p-8">
@@ -187,7 +187,7 @@ At MMSCRIPTS, we guide authors through these challenges, ensuring your publishin
                   <img
                     src={selectedArticle.image}
                     alt={selectedArticle.title}
-                    className="w-full lg:w-1/3 h-[300px] lg:h-[300px] object-cover object-center rounded-xl mb-6 lg:mb-0 lg:float-left lg:mr-8"
+                    className="w-full lg:w-1/3 h-[250px] lg:h-[300px] object-contain lg:object-cover object-center rounded-xl mb-6 lg:mb-0 lg:float-left lg:mr-8 bg-gray-50"
                   />
                   
                   <div className="prose prose-lg max-w-none flex-1">

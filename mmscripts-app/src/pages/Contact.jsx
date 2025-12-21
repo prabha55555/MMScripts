@@ -146,7 +146,7 @@ const Contact = () => {
               transition={{ duration: 0.6 }}
               className="bg-white p-8 lg:p-12 rounded-xl shadow-lg"
             >
-              <form action="https://formsubmit.co/k.prabhakaran.in@gmail.com" method="POST" className="space-y-6">
+              <form action="https://formsubmit.co/mmscriptspublishinghouse@gmail.com" method="POST" className="space-y-6">
                 {/* FormSubmit Configuration */}
                 <input type="hidden" name="_subject" value="New Contact Form Submission from MMSCRIPTS" />
                 <input type="hidden" name="_captcha" value="false" />
