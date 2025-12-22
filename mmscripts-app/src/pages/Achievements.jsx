@@ -49,22 +49,22 @@ const Achievements = () => {
 
   const successStories = [
     {
-      author: 'Sarah Mitchell',
-      book: 'The Journey Within',
-      quote: 'MMSCRIPTS turned my manuscript into a published book I\'m proud of. Their support throughout the process was invaluable.',
-      achievement: 'Bestseller in Personal Growth category'
+      author: 'Shreenithi. Mu ',
+      book: 'The She Stories',
+      quote: 'MMScripts marked my very first step into publishing, and it means more to me than words can say. This collection reflects my love for writing and the joy of watching my thoughts turn into something real. It feels less like an end and more like the beginning of many stories ahead.',
+      
     },
     {
-      author: 'Rajesh Kumar',
-      book: 'Whispers of Tomorrow',
-      quote: 'The team at MMSCRIPTS understood my vision and helped me bring it to life with professionalism and care.',
-      achievement: 'Featured in literary magazines'
+      author: 'Shree K N',
+      book: 'Author of Rudran & Muhabatt',
+      quote: 'Working with MMScripts has been one of the most beautiful surprises of my writing journey. Even without meeting in person, the understanding, patience, and care felt deeply personal. My vision was respected at every step, making the process joyful, collaborative, and truly special.',
+      
     },
     {
-      author: 'Priya Sharma',
-      book: 'Echoes of Silence',
-      quote: 'From editing to marketing, MMSCRIPTS provided comprehensive support that made my publishing journey smooth and enjoyable.',
-      achievement: 'Winner of local poetry award'
+      author: 'Aancelin Mary. A ',
+      book: 'Shrouds of Deception',
+      quote: 'My experience with MMScripts was warm and reassuring. Madhavaperiya patiently explained every detail and handled my work with genuine care, making the entire process comfortable and clear.',
+        
     },
   ];
 
@@ -246,9 +246,7 @@ const Achievements = () => {
                 <div className="border-t border-gray-200 pt-4">
                   <p className="font-bold text-gray-800 mb-1">{story.author}</p>
                   <p className="text-sm text-gray-600 mb-2">Author of "{story.book}"</p>
-                  <div className="inline-block bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-xs font-semibold">
-                    {story.achievement}
-                  </div>
+                 
                 </div>
               </motion.div>
             ))}
